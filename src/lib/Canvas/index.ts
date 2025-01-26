@@ -1,3 +1,4 @@
+import Ball from "../PhysicsObject/Ball";
 import Vector from "../Vector";
 
 export default class Canvas {
@@ -28,5 +29,14 @@ export default class Canvas {
             this.c.strokeStyle=color
             this.c.stroke()
         }
+    }
+    batchArc(arcs:Ball[]){
+        this.c.beginPath()
+        arcs.forEach(a=>{
+            this.c.arc(a.pos.x,a.pos.y,a.radius,0,2*Math.PI)
+        })
+        this.c.fillStyle="red"
+        this.c.fill()
+        this.c.closePath()
     }
 }
