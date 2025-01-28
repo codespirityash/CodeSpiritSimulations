@@ -24,7 +24,7 @@ npm run build
 
 ```
 
-The project is hosted [here](https://codespirityash.github.io/CodeSpiritSimulations/)
+The project is hosted [here](https://codespiritsimulations.firebaseapp.com)
 
 ---
 
