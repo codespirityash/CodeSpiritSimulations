@@ -1,26 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeSpiritSimulations</title>
     <style>
-      *{
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: sans-serif;
       }
-      canvas{
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #000;
+        color: #fff;
+      }
+
+      header button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        padding: 0;
+        cursor: pointer;
+
+      }
+
+      header nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      header a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 1rem;
+      }
+
+      header a>ion-icon {
+        font-size: 2rem;
+      }
+
+      canvas {
         position: fixed;
         top: 0;
         left: 0;
       }
-      
     </style>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <button>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <h1>CodeSpiritSimulations</h1>
+        <nav>
+          <a href="#">About</a>
+          <a href="#">All Simulations</a>
+          <a href="#">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </nav>
+      </header>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="/src/main.ts"></script>
   </body>
+
 </html>
