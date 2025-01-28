@@ -22,6 +22,7 @@
         padding: 1rem;
         background-color: #000;
         color: #fff;
+        z-index: 9999;
       }
 
       header button {
@@ -54,6 +55,21 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: -1;
+      }
+      .content{
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        background-color: #000;
+        grid-template-rows:1fr;
+        grid-template-columns: 1fr 9fr;
+      }
+      .content>.sidebar{
+        width: clamp(300px, 20%, 400px);
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        transform: translateX(-100%);
       }
     </style>
   </head>
@@ -66,13 +82,31 @@
         </button>
         <h1>CodeSpiritSimulations</h1>
         <nav>
-          <a href="#">About</a>
-          <a href="#">All Simulations</a>
-          <a href="#">
+          <a href="/about.html">About</a>
+          <a href="/projects.html">All Simulations</a>
+          <a href="https://github.com/codespirityash/CodeSpiritSimulations">
             <ion-icon name="logo-github"></ion-icon>
           </a>
         </nav>
       </header>
+      <section class="content">
+        <div class="sidebar">
+          <div class="title">Top Simulations</div>
+          <nav>
+            <button>Genetic Algorithm</button>
+            <button>Infection Simulation</button>
+            <button>3D Cube</button>
+            <button>Sandbox Simulation</button>
+          </nav>
+          <div class="title">Some Others</div>
+          <nav>
+            <button>Vector Fields</button>
+            <button>Springs and Ropes</button>
+            <button>Brownian Motion</button>
+            <button>Fluid Dynamics</button>
+          </nav>
+        </div>
+      </section>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
