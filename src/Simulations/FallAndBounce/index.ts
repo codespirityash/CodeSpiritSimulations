@@ -5,7 +5,7 @@ import Vector from "../../lib/Vector";
 export default class FallAndBounce {
     agents: Ball[] = []
     constructor(public canvas: Canvas) {
-        this.agents = new Array(10).fill(0).map(() => Ball.randomBall(canvas.size.width, canvas.size.height))
+        this.agents = new Array(50).fill(0).map(() => Ball.randomBall(canvas.size.width, canvas.size.height))
     }
     computation() { }
     animate() {
