@@ -27,7 +27,6 @@ npm run build
 The project is hosted [here](https://codespiritsimulations.firebaseapp.com)
 
 ---
-w
 ### List of Simulations
 - Infectioni Simulator
 - Gravity
