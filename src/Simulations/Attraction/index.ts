@@ -14,5 +14,21 @@ export default class Attraction {
     }
 
     animate() {
+        this.canvas.clear();
+        
+        for (let i = 0; i < this.agents.length; i++) {
+            const agent = this.agents[i];
+            if (agent.pos.distance(this.attractor.pos) < 200) {
+                agent.attract(this.attractor, 2);
+            }
+            if (agent.pos.distance(this.repulsor.pos) < 200) {
+                agent.repel(this.repulsor, 2);
+            }
+            
+            agent.move().draw(this.canvas, true);
+        }
+        
+        this.attractor.draw(this.canvas, true);
+        this.repulsor.draw(this.canvas, true);
     }
 }
